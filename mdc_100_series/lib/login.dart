@@ -20,6 +20,10 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final _fullnameController = TextEditingController();
+  final _passwordController = TextEditingController();
+  final _emailController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,18 +41,21 @@ class _LoginPageState extends State<LoginPage> {
             ),
             SizedBox(height: 120.0),
             TextField(
-              decoration: InputDecoration(filled: true, labelText: 'Username'),
+              controller: _fullnameController,
+              decoration: InputDecoration(filled: true, labelText: 'Full Name'),
             ),
 
             // spacer
             SizedBox(height: 12.0),
             TextField(
+              controller: _emailController,
               decoration: InputDecoration(filled: true, labelText: 'Email'),
             ),
 
             // spacer
             SizedBox(height: 12.0),
             TextField(
+              controller: _passwordController,
               decoration: InputDecoration(filled: true, labelText: 'Password'),
               obscureText: true,
             ),
