@@ -66,13 +66,17 @@ class _LoginPageState extends State<LoginPage> {
             ButtonBar(children: <Widget>[
               FlatButton(
                 child: Text('CANCEL'),
-                onPressed: () {},
+                onPressed: () {
+                  _fullnameController.clear();
+                  _emailController.clear();
+                  _passwordController.clear();
+                },
               ),
               RaisedButton(
                 child: Text("NEXT"),
                 onPressed: () {},
               )
-            ])
+            ]),
 
             // TODO: Wrap Username with AccentColorOverride (103)
             // TODO: Remove filled: true values (103)
