@@ -13,6 +13,7 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart';
+import 'home.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -74,7 +75,12 @@ class _LoginPageState extends State<LoginPage> {
               ),
               RaisedButton(
                 child: Text("NEXT"),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );
+                },
               )
             ]),
 
